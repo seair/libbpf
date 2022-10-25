@@ -151,7 +151,7 @@ define do_s_install
 	$(Q)cp -fR $1 '$(DESTDIR)$2'
 endef
 
-install: all install_headers install_pkgconfig
+install: all install_headers install_pkgconfig install_uapi_headers
 	$(call do_s_install,$(STATIC_LIBS) $(SHARED_LIBS),$(LIBDIR))
 
 install_headers:
